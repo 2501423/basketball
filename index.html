@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Houston Rockets 試合データ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <h1>Houston Rockets 試合データ</h1>
+    <div class="nav">
+  <a href="player.html" class="nav-btn">選手管理</a>
+</div>
+  <h3>試合入力</h3>
+  <input type="date" id="date"><br>
+
+  <select id="opponent"><option value="" disabled selected>相手チーム</option></select><br>
+
+  <input type="number" id="myScore" placeholder="Rockets得点" min="0">
+  <input type="number" id="oppScore" placeholder="相手得点" min="0"><br>
+
+<select id="topScorer"><option value="" disabled selected>最多得点選手</option></select>
+  <input type="number" id="topPoints" placeholder="最多得点" min="0"><br>
+
+  <button type="button" id="saveBtn">試合を保存</button>
+
+  <hr>
+
+  <h3 id="summary"></h3>
+  <div id="list"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <h3>得点推移</h3>
+  <canvas id="scoreChart"></canvas>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

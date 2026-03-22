@@ -1,0 +1,197 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  color: #c8102e;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+input, select {
+  padding: 5px 10px;
+  margin: 4px 0 10px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  min-width: 200px;
+  font-size: 14px;
+  color: #333;
+}
+
+select:invalid {
+  color: #999;
+}
+
+input:focus, select:focus {
+  border-color: #c8102e;
+  outline: none;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #c8102e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #a00b23;
+}
+
+#list {
+  margin-top: 20px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.game.win { border-left: 5px solid #4CAF50; }
+.game.lose { border-left: 5px solid #F44336; }
+
+.game strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+
+.game .team-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.game .vs-text {
+  font-weight: bold;
+  margin: 0 6px;
+}
+
+.game .score,
+.game .top-scorer,
+.game button {
+  text-align: center;
+  margin: 3px 0;
+}
+
+.game .score {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.game .top-scorer {
+  font-size: 0.95em;
+  color: #555;
+}
+
+.game button {
+  background-color: #888;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.game button:hover {
+  background-color: #555;
+}
+
+#summary {
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.team-logo {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 20px; }
+
+  input, select {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  #myScore, #oppScore {
+    width: 48%;
+  }
+
+  .game strong { flex-wrap: wrap; gap: 6px; }
+
+  .game .team-group img.team-logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .game .score { font-size: 1em; }
+  .game .top-scorer { font-size: 0.9em; }
+
+  #playerList button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.nav-btn {
+  background-color: #c8102e;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-btn:hover { background-color: #a00b23; }
+
+#playerList div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+
+.player-name { flex: 1; }
+
+#playerList button { margin-left: 10px; white-space: nowrap; width: auto; }
